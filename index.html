@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ủng Hộ - Nguyễn Bùi Trường</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #090d16;
+            color: #f3f4f6;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Glassmorphism Effect */
+        .glass-card {
+            background: rgba(17, 24, 39, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        /* Glow animation */
+        .glow-bg {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(90px);
+            z-index: 0;
+            opacity: 0.35;
+        }
+
+        /* Decorative Floating Cats */
+        .floating-cat {
+            position: fixed;
+            font-size: 1.8rem;
+            color: rgba(236, 72, 153, 0.4);
+            z-index: 5;
+            animation: floatCat 4s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        @keyframes floatCat {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(5deg); }
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #090d16;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #e52e71;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-4 relative">
+
+    <!-- Decorative Corner Cats -->
+    <div class="floating-cat top-6 left-6 animate-bounce" style="animation-duration: 3s;"><i class="fa-solid fa-cat"></i></div>
+    <div class="floating-cat top-12 right-8" style="animation-delay: 1s;"><i class="fa-solid fa-paw"></i></div>
+    <div class="floating-cat bottom-10 left-10" style="animation-delay: 2s;"><i class="fa-solid fa-paw"></i></div>
+    <div class="floating-cat bottom-6 right-6 animate-bounce" style="animation-duration: 3.5s;"><i class="fa-solid fa-cat"></i></div>
+
+    <!-- Background Animated Light Blobs -->
+    <div class="glow-bg w-80 h-80 bg-pink-600 top-10 -left-10 animate-pulse"></div>
+    <div class="glow-bg w-96 h-96 bg-purple-700 bottom-10 -right-10 animate-pulse" style="animation-delay: 1.5s;"></div>
+
+    <div class="w-full max-w-md relative z-10 my-6">
+        <!-- Main Card Container -->
+        <div class="glass-card rounded-3xl p-6 md:p-8 shadow-2xl text-center border border-white/10">
+            
+            <!-- Profile Avatar & Info -->
+            <div class="relative w-28 h-28 mx-auto mb-4">
+                <div class="absolute inset-0 rounded-full bg-gradient-to-tr from-pink-500 to-purple-600 animate-spin" style="animation-duration: 8s;"></div>
+                <img src="https://i.postimg.cc/0jBv1jwP/IMG-3417.jpg"
+                     alt="Avatar" 
+                     class="relative w-full h-full object-cover rounded-full p-1 bg-gray-900 border-2 border-white/20">
+            </div>
+
+            <h1 class="text-2xl font-bold text-white tracking-wide flex items-center justify-center gap-2">
+                Nguyễn Bùi Trường 
+                <i class="fa-solid fa-circle-check text-pink-500 text-lg" title="Đã xác thực"></i>
+            </h1>
+            <p class="text-xs text-gray-400 mt-1">@nguyenbuitruong • Content Creator & Developer</p>
+            <p class="text-sm text-gray-300 mt-3 bg-white/5 py-2 px-4 rounded-xl border border-white/5 inline-block">
+                ☕ Mọi sự ủng hộ từ bạn là động lực rất lớn với mình!
+            </p>
+
+            <hr class="border-white/10 my-6">
+
+            <!-- Section Header: Thanh toán và Donate -->
+            <div class="flex items-center justify-center gap-2 mb-4">
+                <div class="h-[1px] w-8 bg-pink-500/50"></div>
+                <h2 class="text-xs font-bold uppercase tracking-widest text-pink-400">Thanh toán và Donate</h2>
+                <div class="h-[1px] w-8 bg-pink-500/50"></div>
+            </div>
+
+            <!-- MoMo Payment Section -->
+            <div class="bg-gradient-to-br from-pink-950/40 to-purple-950/40 border border-pink-500/30 rounded-2xl p-5 shadow-lg">
+                <!-- MoMo Header -->
+                <div class="flex items-center justify-between mb-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-[#a50064] flex items-center justify-center font-bold text-white text-xs shadow-md">
+                            MoMo
+                        </div>
+                        <div class="text-left">
+                            <h3 class="font-bold text-white text-base">Ví MoMo</h3>
+                            <p class="text-xs text-pink-300">Quét mã hoặc chuyển SĐT</p>
+                        </div>
+                    </div>
+                    <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-pink-500/20 text-pink-400 border border-pink-500/30">
+                        Khuyên dùng
+                    </span>
+                </div>
+
+                <!-- QR Code Block -->
+                <div class="bg-white p-3 rounded-xl shadow-inner inline-block my-2 border border-gray-200">
+                    <img id="momo-qr-img" src="https://i.postimg.cc/sDJj2fC0/IMG-4803.jpg"
+                         alt="Mã QR MoMo" 
+                         class="w-48 h-48 mx-auto rounded-lg object-cover">
+                </div>
+
+                <!-- Nút Tải mã QR về máy -->
+                <div class="mt-2">
+                    <button onclick="downloadQR()" class="text-xs bg-pink-500/20 hover:bg-pink-500/30 text-pink-300 font-medium py-1.5 px-3 rounded-lg border border-pink-500/30 transition-all flex items-center justify-center gap-1.5 mx-auto">
+                        <i class="fa-solid fa-download"></i> Tải ảnh mã QR
+                    </button>
+                </div>
+
+                <p class="text-[11px] text-gray-400 mt-1">Quét bằng ứng dụng MoMo hoặc tải về để thanh toán</p>
+
+                <!-- Account Info & Copy Button -->
+                <div class="mt-4 space-y-2 text-left bg-black/30 p-3.5 rounded-xl border border-white/5">
+                    <div class="flex justify-between items-center text-xs">
+                        <span class="text-gray-400">Số điện thoại MoMo:</span>
+                        <div class="flex items-center gap-2">
+                            <span id="momo-number" class="font-bold text-pink-400 text-sm tracking-wider">0985204819</span>
+                            <button onclick="copyText('momo-number')" class="text-gray-300 hover:text-white bg-white/10 hover:bg-white/20 p-1.5 rounded-lg transition-all" title="Sao chép">
+                                <i class="fa-regular fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center text-xs pt-1 border-t border-white/5">
+                        <span class="text-gray-400">Chủ tài khoản:</span>
+                        <span class="font-semibold text-white">NGUYỄN BÙI TRƯỜNG</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Social Links & Contact -->
+            <div class="mt-6 flex justify-center gap-3">
+                <a href="https://www.facebook.com/share/14vcYrqRFdW/?mibextid=wwXIfr" target="_blank" class="w-10 h-10 rounded-xl glass-card flex items-center justify-center text-gray-300 hover:text-blue-400 hover:border-blue-400/50 transition-all">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="https://www.tiktok.com/@truongcon_jqk" target="_blank" class="w-10 h-10 rounded-xl glass-card flex items-center justify-center text-gray-300 hover:text-pink-400 hover:border-pink-400/50 transition-all">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+                <a href="https://www.instagram.com/truongcon_jqk" target="_blank" class="w-10 h-10 rounded-xl glass-card flex items-center justify-center text-gray-300 hover:text-purple-400 hover:border-purple-400/50 transition-all">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+
+            <!-- Footer -->
+            <p class="text-[11px] text-gray-500 mt-6">
+                © 2027 Designed with ❤️ by Nguyễn Bùi Trường
+            </p>
+        </div>
+    </div>
+
+    <!-- Toast Notification (Sao chép thành công) -->
+    <div id="toast" class="fixed bottom-5 right-5 bg-pink-600 text-white text-xs font-semibold px-4 py-3 rounded-xl shadow-xl flex items-center gap-2 transform translate-y-20 opacity-0 transition-all duration-300 z-50">
+        <i class="fa-solid fa-circle-check text-sm"></i>
+        <span id="toast-message">Đã sao chép thành công!</span>
+    </div>
+
+    <script>
+        // Hàm copy số điện thoại MoMo
+        function copyText(elementId) {
+            const textToCopy = document.getElementById(elementId).innerText;
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                showToast("Đã sao chép SĐT MoMo: " + textToCopy);
+            }).catch(err => {
+                console.error('Lỗi khi sao chép: ', err);
+            });
+        }
+
+        // Hàm tải ảnh mã QR về máy
+        function downloadQR() {
+            const imageUrl = document.getElementById('momo-qr-img').src;
+            const fileName = 'QR-MoMo-NguyenBuiTruong.jpg';
+            
+            fetch(imageUrl)
+                .then(response => response.blob())
+                .then(blob => {
+                    const blobUrl = window.URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = blobUrl;
+                    a.download = fileName;
+                    document.body.appendChild(a);
+                    a.click();
+                    document.body.removeChild(a);
+                    window.URL.revokeObjectURL(blobUrl);
+                    showToast("Đã tải mã QR thành công!");
+                })
+                .catch(err => {
+                    console.error('Lỗi khi tải ảnh: ', err);
+                    window.open(imageUrl, '_blank');
+                });
+        }
+
+        // Hiển thị thông báo Toast
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const toastMessage = document.getElementById('toast-message');
+            toastMessage.innerText = message;
+            
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            toast.classList.add('translate-y-0', 'opacity-100');
+
+            setTimeout(() => {
+                toast.classList.remove('translate-y-0', 'opacity-100');
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 2500);
+        }
+    </script>
+</body>
+</html>
