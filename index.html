@@ -125,21 +125,15 @@
                     </span>
                 </div>
 
-                <!-- QR Code Block -->
+                <!-- QR Code Block (Nhấn giữ để lưu ảnh trực tiếp vào thư viện) -->
                 <div class="bg-white p-3 rounded-xl shadow-inner inline-block my-2 border border-gray-200">
-                    <img id="momo-qr-img" src="https://i.postimg.cc/sDJj2fC0/IMG-4803.jpg"
+                    <img src="https://i.postimg.cc/sDJj2fC0/IMG-4803.jpg"
                          alt="Mã QR MoMo" 
-                         class="w-48 h-48 mx-auto rounded-lg object-cover">
+                         class="w-48 h-48 mx-auto rounded-lg object-cover cursor-pointer hover:opacity-95 transition-all"
+                         title="Chạm giữ để lưu ảnh QR">
                 </div>
-
-                <!-- Nút Tải mã QR về máy -->
-                <div class="mt-2">
-                    <button onclick="downloadQR()" class="text-xs bg-pink-500/20 hover:bg-pink-500/30 text-pink-300 font-medium py-1.5 px-3 rounded-lg border border-pink-500/30 transition-all flex items-center justify-center gap-1.5 mx-auto">
-                        <i class="fa-solid fa-download"></i> Tải ảnh mã QR
-                    </button>
-                </div>
-
-                <p class="text-[11px] text-gray-400 mt-1">Quét bằng ứng dụng MoMo hoặc tải về để thanh toán</p>
+                
+                <p class="text-[11px] text-pink-300 mt-1 font-medium">💡 Chạm giữ vào mã QR để lưu ảnh hoặc quét trực tiếp</p>
 
                 <!-- Account Info & Copy Button -->
                 <div class="mt-4 space-y-2 text-left bg-black/30 p-3.5 rounded-xl border border-white/5">
@@ -194,30 +188,6 @@
             }).catch(err => {
                 console.error('Lỗi khi sao chép: ', err);
             });
-        }
-
-        // Hàm tải ảnh mã QR về máy
-        function downloadQR() {
-            const imageUrl = document.getElementById('momo-qr-img').src;
-            const fileName = 'QR-MoMo-NguyenBuiTruong.jpg';
-            
-            fetch(imageUrl)
-                .then(response => response.blob())
-                .then(blob => {
-                    const blobUrl = window.URL.createObjectURL(blob);
-                    const a = document.createElement('a');
-                    a.href = blobUrl;
-                    a.download = fileName;
-                    document.body.appendChild(a);
-                    a.click();
-                    document.body.removeChild(a);
-                    window.URL.revokeObjectURL(blobUrl);
-                    showToast("Đã tải mã QR thành công!");
-                })
-                .catch(err => {
-                    console.error('Lỗi khi tải ảnh: ', err);
-                    window.open(imageUrl, '_blank');
-                });
         }
 
         // Hiển thị thông báo Toast
